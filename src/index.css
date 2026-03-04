@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-romantic-pink: #d81b60; /* Deep pink/magenta */
+  --color-romantic-gold: #ffb300; /* Richer gold */
+  --color-romantic-dark: #1a0b1c; /* Very dark purple/black */
+  --color-romantic-teal: #880e4f; /* Dark burgundy instead of teal */
+  --font-heading: "Caveat", cursive;
+  --font-body: "Poppins", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-body text-gray-200 bg-romantic-dark;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+    z-index: 50;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .bg-animated-gradient {
+    background: linear-gradient(-45deg, #2d0a1f, #1a0b1c, #4a0e30, #280616);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+  }
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatWrap {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: floatWrap 3s ease-in-out infinite;
+}
