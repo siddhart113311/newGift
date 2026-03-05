@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://siddhart113311.github.io/newGift",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
