@@ -8,15 +8,15 @@ import FloatingHearts from './components/FloatingHearts';
 import FloatingSparkles from './components/FloatingSparkles';
 
 const PUZZLE_DATA = [
-  { word: "Kya", title: "Kya Kehna", options: ["Kya", "Kehna", "Preity", "Rahul"], imageUrl: "/assets/posters/kya-kehna.jpg" },
-  { word: "Aap", title: "Aap Ki Khatir", options: ["Khatir", "Zindagi", "Aap", "Pyar"], imageUrl: "/assets/posters/aap-ki-khatir.jpg" },
-  { word: "Mere", title: "Mere Brother Ki Dulhan", options: ["Dulhan", "Mere", "Brother", "Shaadi"], imageUrl: "/assets/posters/mere-brother-ki-dulhan.jpg" },
-  { word: "Saath", title: "Saathiya", options: ["Saath", "Saathiya", "Sath", "Dil"], imageUrl: "/assets/posters/saathiya.jpg" },
-  { word: "Date", title: "36 China Town", options: ["China", "Town", "36", "Date"], imageUrl: "/assets/posters/36-china-town.jpg" },
-  { word: "Par", title: "Parineeta", options: ["Parineeta", "Pari", "Par", "Dada"], imageUrl: "/assets/posters/parineeta.jpg" },
-  { word: "Jaana", title: "Jaana Pehchana", options: ["Jaana", "Pehchana", "Jana", "Ajnabee"], imageUrl: "/assets/posters/jaana-pehchana.jpg" },
-  { word: "Pasand", title: "Dil Chahta Hai", options: ["Dil", "Chahta", "Hai", "Pasand"], imageUrl: "/assets/posters/dil-chahta-hai.jpg" },
-  { word: "Karogi", title: "Mujhse Dosti Karoge", options: ["Mujhse", "Dosti", "Karoge", "Karogi"], imageUrl: "/assets/posters/mujhse-dosti-karoge.jpg" }
+  { word: "Kya", title: "Kya Kehna", options: ["Kya", "Kehna", "Preity", "Rahul"], imageUrl: "assets/posters/kya-kehna.jpg" },
+  { word: "Aap", title: "Aap Ki Khatir", options: ["Khatir", "Zindagi", "Aap", "Pyar"], imageUrl: "assets/posters/aap-ki-khatir.jpg" },
+  { word: "Mere", title: "Mere Brother Ki Dulhan", options: ["Dulhan", "Mere", "Brother", "Shaadi"], imageUrl: "assets/posters/mere-brother-ki-dulhan.jpg" },
+  { word: "Saath", title: "Saathiya", options: ["Saath", "Saathiya", "Sath", "Dil"], imageUrl: "assets/posters/saathiya.jpg" },
+  { word: "Date", title: "36 China Town", options: ["China", "Town", "36", "Date"], imageUrl: "assets/posters/36-china-town.jpg" },
+  { word: "Par", title: "Parineeta", options: ["Parineeta", "Pari", "Par", "Dada"], imageUrl: "assets/posters/parineeta.jpg" },
+  { word: "Jaana", title: "Jaana Pehchana", options: ["Jaana", "Pehchana", "Jana", "Ajnabee"], imageUrl: "assets/posters/jaana-pehchana.jpg" },
+  { word: "Pasand", title: "Dil Chahta Hai", options: ["Dil", "Chahta", "Hai", "Pasand"], imageUrl: "assets/posters/dil-chahta-hai.jpg" },
+  { word: "Karogi", title: "Mujhse Dosti Karoge", options: ["Mujhse", "Dosti", "Karoge", "Karogi"], imageUrl: "assets/posters/mujhse-dosti-karoge.jpg" }
 ];
 
 const TARGET_SENTENCE = ["Kya", "Aap", "Mere", "Saath", "Date", "Par", "Jaana", "Pasand", "Karogi"];
