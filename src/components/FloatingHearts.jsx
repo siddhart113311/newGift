@@ -1,10 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Heart } from 'lucide-react';
 
 const FloatingHearts = ({ count = 15 }) => {
-  // Generate random properties for hearts once on mount
-  const hearts = useMemo(() => {
+  const [hearts] = useState(() => {
     return Array.from({ length: count }).map((_, i) => ({
       id: i,
       x: Math.random() * 100, // percentage string
@@ -14,7 +13,7 @@ const FloatingHearts = ({ count = 15 }) => {
       delay: Math.random() * 10,
       opacity: Math.random() * 0.3 + 0.1, // 0.1 to 0.4
     }));
-  }, [count]);
+  });
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">

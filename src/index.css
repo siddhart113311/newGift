@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  --color-romantic-pink: #d81b60; /* Deep pink/magenta */
-  --color-romantic-gold: #ffb300; /* Richer gold */
-  --color-romantic-dark: #1a0b1c; /* Very dark purple/black */
-  --color-romantic-teal: #880e4f; /* Dark burgundy instead of teal */
-  --font-heading: "Caveat", cursive;
-  --font-body: "Poppins", sans-serif;
+  --color-romantic-pink: #d81b60;
+  --color-romantic-gold: #ffb300;
+  --color-romantic-dark: #1a0b1c;
+  --color-romantic-teal: #880e4f;
+  --font-heading: "Orbitron", sans-serif;
+  --font-body: "Rajdhani", sans-serif;
 }
 
 @layer base {
@@ -17,7 +17,7 @@
   }
 
   body::after {
-    content: '';
+    content: "";
     position: fixed;
     top: 0;
     left: 0;

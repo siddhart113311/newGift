@@ -12,7 +12,7 @@ const LandingPage = ({ onStart }) => {
         className="max-w-xl"
       >
         <h1 className="text-5xl md:text-7xl font-heading text-romantic-pink mb-6 drop-shadow-sm">
-          A small Bollywood puzzle for someone very special 💫
+          The Ultimate Priyadarshan Dialogue Challenge 🎬
         </h1>
       </motion.div>
 

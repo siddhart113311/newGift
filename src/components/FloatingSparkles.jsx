@@ -1,9 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const FloatingSparkles = ({ count = 25 }) => {
-  // Generate random properties once
-  const sparkles = useMemo(() => {
+  const [sparkles] = useState(() => {
     return Array.from({ length: count }).map((_, i) => ({
       id: i,
       x: Math.random() * 100,
@@ -12,7 +11,7 @@ const FloatingSparkles = ({ count = 25 }) => {
       duration: Math.random() * 2 + 1.5, // 1.5s to 3.5s
       delay: Math.random() * 2,
     }));
-  }, [count]);
+  });
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
