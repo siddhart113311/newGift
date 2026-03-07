@@ -1,41 +1,43 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+/**
+ * FloatingSparkles — Pure CSS version (no Framer Motion, GPU only)
+ * Uses CSS animation instead of JS-driven Framer Motion to avoid
+ * 30 separate JS animation loops. CSS animations run on the compositor thread.
+ */
+import React, { useMemo } from 'react';
 
-const FloatingSparkles = ({ count = 25 }) => {
-  const [sparkles] = useState(() => {
-    return Array.from({ length: count }).map((_, i) => ({
+const FloatingSparkles = ({ count = 12 }) => {
+  const sparkles = useMemo(() =>
+    Array.from({ length: count }).map((_, i) => ({
       id: i,
-      x: Math.random() * 100,
-      y: Math.random() * 100,
-      size: Math.random() * 4 + 2, // 2px to 6px
-      duration: Math.random() * 2 + 1.5, // 1.5s to 3.5s
-      delay: Math.random() * 2,
-    }));
-  });
+      left: `${Math.random() * 100}%`,
+      top: `${Math.random() * 100}%`,
+      size: Math.random() * 3 + 2,           // 2–5 px
+      duration: `${(Math.random() * 2 + 1.5).toFixed(1)}s`,
+      delay: `${(Math.random() * 3).toFixed(1)}s`,
+    })),
+  [count]);
 
   return (
     <div className="fixed inset-0 pointer-events-none overflow-hidden z-0">
-      {sparkles.map((sparkle) => (
-        <motion.div
-          key={sparkle.id}
-          initial={{ 
-            x: `${sparkle.x}vw`, 
-            y: `${sparkle.y}vh`, 
-            scale: 0,
-            opacity: 0
+      <style>{`
+        @keyframes sparkle-pulse {
+          0%, 100% { opacity: 0; transform: scale(0); }
+          50%       { opacity: 0.75; transform: scale(1); }
+        }
+      `}</style>
+      {sparkles.map((s) => (
+        <div
+          key={s.id}
+          className="absolute rounded-full bg-white"
+          style={{
+            left: s.left,
+            top: s.top,
+            width: s.size,
+            height: s.size,
+            boxShadow: '0 0 6px rgba(255,255,255,0.7)',
+            animation: `sparkle-pulse ${s.duration} ${s.delay} ease-in-out infinite`,
+            willChange: 'transform, opacity',
           }}
-          animate={{
-            scale: [0, 1, 0],
-            opacity: [0, 0.8, 0],
-          }}
-          transition={{
-            duration: sparkle.duration,
-            repeat: Infinity,
-            delay: sparkle.delay,
-            ease: "easeInOut"
-          }}
-          className="absolute rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"
-          style={{ width: sparkle.size, height: sparkle.size }}
         />
       ))}
     </div>

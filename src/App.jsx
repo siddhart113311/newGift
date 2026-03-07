@@ -95,12 +95,22 @@ function App() {
   };
 
   return (
-    <div className="font-body text-gray-800 bg-animated-gradient min-h-screen relative overflow-x-hidden">
-      
-      {/* Magical Sparkles Background Elements */}
-      <div className="fixed inset-0 pointer-events-none opacity-50 z-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent"></div>
-      <FloatingSparkles count={30} />
-      <FloatingHearts count={20} />
+    <div
+      className="font-body text-gray-800 min-h-screen relative overflow-x-hidden"
+      style={{
+        backgroundImage: `url('/newGift/assets/bg_red_stars.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        // No backgroundAttachment:fixed — it forces repaint on every scroll
+      }}
+    >
+      {/* Gradient overlay — promoted to its own GPU layer via will-change */}
+      <div
+        className="fixed inset-0 bg-animated-gradient opacity-60 z-0 pointer-events-none"
+        style={{ willChange: 'opacity' }}
+      />
+      <FloatingSparkles count={12} />
+      <FloatingHearts count={8} />
 
       {gameState === 'landing' && <LandingPage onStart={startGame} />}
 
