@@ -98,7 +98,7 @@ function App() {
     <div
       className="font-body text-gray-800 min-h-screen relative overflow-x-hidden"
       style={{
-        backgroundImage: `url('/newGift/assets/bg_red_stars.png')`,
+        backgroundImage: `url('/newGift/assets/bg_red_stars.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         // No backgroundAttachment:fixed — it forces repaint on every scroll

@@ -125,7 +125,7 @@ const DialogueQuestionCard = ({ questionData, onCorrect }) => {
         <motion.div
           className="mb-8 p-6 rounded-2xl border w-full text-center relative overflow-hidden"
           style={{
-            backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/newGift/assets/bg_red_stars.png')`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('/newGift/assets/bg_red_stars.webp')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             borderColor: 'rgba(245,197,24,0.5)',
@@ -182,6 +182,8 @@ const DialogueQuestionCard = ({ questionData, onCorrect }) => {
                   <img
                     src={getPosterUrl(option)}
                     alt={option}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                     onError={(e) => {
                       e.target.src = `https://via.placeholder.com/300x450/3d0c6e/f5c518?text=${encodeURIComponent(option)}`;

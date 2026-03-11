@@ -7,7 +7,7 @@ const LandingPage = ({ onStart }) => {
     <div
       className="flex flex-col items-center justify-center min-h-screen p-4 text-center relative"
       style={{
-        backgroundImage: `url('/newGift/assets/bg_purple.png')`,
+        backgroundImage: `url('/newGift/assets/bg_purple.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}

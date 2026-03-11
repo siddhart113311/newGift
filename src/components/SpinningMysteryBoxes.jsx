@@ -55,7 +55,7 @@ const SpinningMysteryBoxes = ({ targetSentence }) => {
     <div
       className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url('/newGift/assets/bg_purple.png')`,
+        backgroundImage: `url('/newGift/assets/bg_purple.webp')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
